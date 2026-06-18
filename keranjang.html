@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keranjang | Matawai Collection</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-cream sticky-top shadow-sm">
+    <div class="container">
+    <a class="navbar-brand brand-logo" href="index.html">
+    <span class="brand-mark">
+    <img src="img/logo-matawai.png" alt="Logo Matawai Collection">
+    </span>
+    <span>Matawai Collection</span>
+    </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang & Lokasi</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-gold position-relative active" href="keranjang.html">
+              <i class="bi bi-bag-check me-1"></i> Keranjang
+              <span class="cart-count badge rounded-pill text-bg-danger">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <span class="eyebrow">Keranjang belanja</span>
+      <h1>Produk yang kamu pilih</h1>
+    </div>
+  </header>
+
+  <main class="section-padding pt-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="cart-panel shadow-soft">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h4 mb-0">Daftar Keranjang</h2>
+              <button class="btn btn-sm btn-outline-danger" id="clearCartBtn">
+                <i class="bi bi-trash me-1"></i>Kosongkan
+              </button>
+            </div>
+
+            <div id="cartItems"></div>
+
+            <div id="emptyCart" class="empty-box d-none">
+              <i class="bi bi-bag-x"></i>
+              <h4>Keranjang masih kosong</h4>
+              <p>Pilih produk terlebih dahulu sebelum melanjutkan checkout.</p>
+              <a href="produk.html" class="btn btn-main">Lihat Produk</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="summary-card shadow-soft sticky-summary">
+            <h3>Ringkasan Belanja</h3>
+
+            <div class="summary-row">
+              <span>Total produk</span>
+              <strong id="totalItems">0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Total harga</span>
+              <strong id="totalPrice">Rp0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Biaya layanan</span>
+              <strong>Rp0</strong>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+              <span>Total bayar</span>
+              <strong id="grandTotal">Rp0</strong>
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+              <a href="checkout.html" class="btn btn-main" id="checkoutBtn">
+                Lanjut Checkout
+              </a>
+              <a href="produk.html" class="btn btn-outline-main">
+                Tambah Produk
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-section">
+    <div class="container">
+      <p class="mb-0">Matawai Collection. Website katalog e-commerce sederhana.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
